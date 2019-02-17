@@ -17,10 +17,10 @@ namespace Sweepstakes
         public Contestant(string firstName, string lastName, string email, string address, int registrationNumber)
         {
             //maybe make these null to start? similar to binary search tree?
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.email = email;
-            this.address = address;
+            this.firstName = UserInterface.GetContestantInfo("firstname");
+            this.lastName = UserInterface.GetContestantInfo("lastname");
+            this.email = UserInterface.GetContestantInfo("email");
+            this.address = UserInterface.GetContestantInfo("address");
             this.registrationNumber = registrationNumber;
         }
     }
