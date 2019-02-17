@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    class UserInterface
+    public static class UserInterface
     {
+        //similar to lemonade stand?
+
+        public static void DisplayContestantInfo(Contestant contestant)
+        {
+            Console.WriteLine($"Contestant: {contestant}");
+            Console.WriteLine();
+        }
     }
 }
