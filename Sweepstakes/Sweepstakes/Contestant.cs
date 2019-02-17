@@ -14,13 +14,12 @@ namespace Sweepstakes
         string address;
         int registrationNumber;
 
-        public Contestant(string firstName, string lastName, string email, string address, int registrationNumber)
+        public Contestant(string firstName, string lastName, string email, int registrationNumber)
         {
-            //maybe make these null to start? similar to binary search tree?
+            
             this.firstName = UserInterface.GetContestantInfo("firstname");
             this.lastName = UserInterface.GetContestantInfo("lastname");
-            this.email = UserInterface.GetContestantInfo("email");
-            this.address = UserInterface.GetContestantInfo("address");
+            this.email = UserInterface.GetContestantInfo("email");           
             this.registrationNumber = registrationNumber;
         }
     }
