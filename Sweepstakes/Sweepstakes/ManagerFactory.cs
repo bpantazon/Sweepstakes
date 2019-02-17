@@ -6,7 +6,20 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    class ManagerFactory
+    public class ManagerFactory
     {
+       public void AssignSweepstakesType(string managerChoice)
+        {
+            //how to get the stack or queue to sweepstakes and each manager??? 
+            if (managerChoice == "q")
+            {
+                //new queue for the queue manager?
+            }
+            else if (managerChoice == "s")
+            {
+                //new stack for stack manager
+            }
+        }
+
     }
 }

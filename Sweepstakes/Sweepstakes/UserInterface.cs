@@ -10,11 +10,11 @@ namespace Sweepstakes
     {
         //similar to lemonade stand?
 
-        public static void DisplayContestantInfo(Contestant contestant)
-        {
-            Console.WriteLine($"Contestant: {contestant}");
-            Console.WriteLine();
-        }
+        //public static void DisplayContestantInfo(Contestant contestant)
+        //{
+        //    Console.WriteLine($"Contestant: {contestant}");
+        //    Console.WriteLine();
+        //}
         public static string GetContestantInfo(string info)
         {
             //int registration;
