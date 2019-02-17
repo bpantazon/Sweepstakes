@@ -10,8 +10,7 @@ namespace Sweepstakes
     {
         string firstName;
         string lastName;
-        string email;
-        string address;
+        string email;        
         int registrationNumber;
 
         public Contestant(string firstName, string lastName, string email, int registrationNumber)
@@ -19,7 +18,7 @@ namespace Sweepstakes
             
             this.firstName = UserInterface.GetContestantInfo("firstname");
             this.lastName = UserInterface.GetContestantInfo("lastname");
-            this.email = UserInterface.GetContestantInfo("email");           
+            this.email = UserInterface.GetContestantInfo("email");    
             this.registrationNumber = registrationNumber;
         }
     }

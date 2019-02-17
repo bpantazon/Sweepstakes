@@ -27,10 +27,7 @@ namespace Sweepstakes
                     return Console.ReadLine();
                 case "lastname":
                     Console.WriteLine("Please enter the last name: ");
-                    return Console.ReadLine();
-                case "address":
-                    Console.WriteLine("Please enter the street address: ");
-                    return Console.ReadLine();
+                    return Console.ReadLine();                
                 case "email":
                     Console.WriteLine("Please enter the email: ");
                     return Console.ReadLine();
@@ -41,6 +38,19 @@ namespace Sweepstakes
 
             }
             
+        }
+        public static string ChooseManager()
+        {
+            string managerChoice;
+            Console.WriteLine("Do you want your sweepstakes managed via stack or queue? Type 's' for stack or 'q' for queue");
+            managerChoice = Console.ReadLine();
+            if (managerChoice != "s" || managerChoice != "q") 
+            {
+                Console.WriteLine("Please enter 's' or 'q'!");
+                Console.ReadLine();
+                ChooseManager();
+            }
+            return managerChoice;
         }
     }
 }
