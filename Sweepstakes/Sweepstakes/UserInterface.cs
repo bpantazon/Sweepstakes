@@ -15,5 +15,28 @@ namespace Sweepstakes
             Console.WriteLine($"Contestant: {contestant}");
             Console.WriteLine();
         }
+        public static string GetContestantInfo(string info)
+        {
+            switch (info)
+            {
+                default:
+                    return "error";
+                case "firstname":
+                    Console.WriteLine("Please enter the first name: ");
+                    return Console.ReadLine();
+                case "lastname":
+                    Console.WriteLine("Please enter the last name: ");
+                    return Console.ReadLine();
+                case "address":
+                    Console.WriteLine("Please enter the street address: ");
+                    return Console.ReadLine();
+                case "email":
+                    Console.WriteLine("Please enter the email: ");
+                    return Console.ReadLine();
+                
+
+            }
+            
+        }
     }
 }
