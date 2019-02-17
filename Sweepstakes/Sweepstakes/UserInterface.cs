@@ -33,7 +33,9 @@ namespace Sweepstakes
                 case "email":
                     Console.WriteLine("Please enter the email: ");
                     return Console.ReadLine();
-                
+                case "registrationNumber":
+                    Console.WriteLine("Pleaes enter the registration number: ");
+                    return Console.ReadLine();
 
             }
             
