@@ -21,7 +21,7 @@ namespace Sweepstakes
             this.lastName = UserInterface.GetContestantInfo("lastname");
             this.email = UserInterface.GetContestantInfo("email");
             this.address = UserInterface.GetContestantInfo("address");
-            this.registrationNumber = UserInterface.GetContestantInfo("registrationNumber");
+            this.registrationNumber = registrationNumber;
         }
     }
 }

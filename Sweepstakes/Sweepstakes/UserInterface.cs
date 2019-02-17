@@ -17,6 +17,7 @@ namespace Sweepstakes
         }
         public static string GetContestantInfo(string info)
         {
+            //int registration;
             switch (info)
             {
                 default:
@@ -33,9 +34,10 @@ namespace Sweepstakes
                 case "email":
                     Console.WriteLine("Please enter the email: ");
                     return Console.ReadLine();
-                case "registrationNumber":
-                    Console.WriteLine("Pleaes enter the registration number: ");
-                    return Console.ReadLine();
+                //case "registrationNumber":
+                //    Console.WriteLine("Pleaes enter the registration number: ");
+                //    registration = Convert.ToInt32(Console.ReadLine());
+                //    return registration;
 
             }
             
