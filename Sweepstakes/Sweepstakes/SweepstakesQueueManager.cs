@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +9,10 @@ namespace Sweepstakes
 {
     class SweepstakesQueueManager : ISweepstakesManager
     {
+        Queue queue = new Queue();
         public Sweepstakes GetSweepstakes()
         {
-            
+            throw new NotImplementedException();
         }
 
         public void InsertSweepstakes(Sweepstakes sweepstakes)

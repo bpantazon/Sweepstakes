@@ -10,6 +10,7 @@ namespace Sweepstakes
     {
         public Dictionary<int, Contestant> contestants;
         public string name;
+        public Contestant winner;
 
         Sweepstakes(string name)
         {
@@ -28,7 +29,9 @@ namespace Sweepstakes
             Random rand = new Random();
             int pickedRegistrationNumber;
             pickedRegistrationNumber = rand.Next(0, contestants.Count);
-            string winner = //contestant first name + last name 
+            winner = contestants[pickedRegistrationNumber];
+            string winnerName = contestants[pickedRegistrationNumber].firstName + contestants[pickedRegistrationNumber].lastName;
+            return winnerName;
         }
 
         public void PrintContestantInfo(Contestant contestant)
@@ -38,5 +41,6 @@ namespace Sweepstakes
             Console.WriteLine($"Email: {contestant.email}");
             Console.ReadLine();
         }
+
     }
 }
