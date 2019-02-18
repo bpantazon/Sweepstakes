@@ -11,15 +11,17 @@ namespace Sweepstakes
        public void AssignSweepstakesType(string managerChoice)
         {
             //how to get the stack or queue to sweepstakes and each manager??? 
-            //use switch case 
-            if (managerChoice == "q")
+            
+            switch (managerChoice)
             {
-                SweepstakesQueueManager queueManager = new SweepstakesQueueManager();
+                case "q":
+                    SweepstakesQueueManager queueManager = new SweepstakesQueueManager();
+                    break;
+                case "s":
+                    SweepstakesStackManager stackManager = new SweepstakesStackManager();
+                    break;
             }
-            else if (managerChoice == "s")
-            {
-                SweepstakesStackManager stackManager = new SweepstakesStackManager();
-            }
+            
         }
 
     }

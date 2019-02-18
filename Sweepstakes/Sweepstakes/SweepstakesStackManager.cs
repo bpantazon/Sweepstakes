@@ -12,12 +12,17 @@ namespace Sweepstakes
         Stack<Sweepstakes> sweepstakesStack = new Stack<Sweepstakes>();
         public Sweepstakes GetSweepstakes()
         {
-            throw new NotImplementedException();
+            //for each to find the Sweepstakes you're looking for
+            //grab an instantiated Sweepstakes object, pop from stack
+            Sweepstakes chosenSweepstakes;
+            chosenSweepstakes = sweepstakesStack.Pop();
+
+            return chosenSweepstakes;
         }
 
         public void InsertSweepstakes(Sweepstakes sweepstakes)
         {
-            throw new NotImplementedException();
+            sweepstakesStack.Push(sweepstakes);
         }
     }
 }
