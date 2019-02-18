@@ -8,18 +8,20 @@ namespace Sweepstakes
 {
     public class ManagerFactory
     {
-       public void AssignSweepstakesType(string managerChoice)
+       public ISweepstakesManager AssignSweepstakesType(string managerChoice)
         {
             //how to get the stack or queue to sweepstakes and each manager??? 
-            
+            //make method return something
             switch (managerChoice)
             {
                 case "q":
                     SweepstakesQueueManager queueManager = new SweepstakesQueueManager();
-                    break;
+                    return queueManager;
                 case "s":
                     SweepstakesStackManager stackManager = new SweepstakesStackManager();
-                    break;
+                    return stackManager;
+                default:
+                    return AssignSweepstakesType(managerChoice);
             }
             
         }

@@ -16,18 +16,7 @@ namespace Sweepstakes
             managerList = new List<ISweepstakesManager>();
             this.manager = manager;
         }
-        public void runSweepstakes()
-        {
-            string managerChoice;
-            managerChoice = UserInterface.ChooseManager();
-            UserInterface.NameSweepstakes();
-            
-            factory.AssignSweepstakesType(managerChoice);
-
-
-
-
-        }
+       
         
 
     }

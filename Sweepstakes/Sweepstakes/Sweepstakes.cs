@@ -28,7 +28,7 @@ namespace Sweepstakes
         {
             Random rand = new Random();
             int pickedRegistrationNumber;
-            pickedRegistrationNumber = rand.Next(0, contestants.Count);
+            pickedRegistrationNumber = rand.Next(1, contestants.Count);
             winner = contestants[pickedRegistrationNumber];
             winner.isWinner = true;
             string winnerName = contestants[pickedRegistrationNumber].firstName + contestants[pickedRegistrationNumber].lastName + contestants[pickedRegistrationNumber].email;
@@ -48,6 +48,20 @@ namespace Sweepstakes
             {
                 PickWinner();
             }           
+        }
+        public void NotifyContestants()
+        {
+            for (int i = 0; i <= contestants.Count; i++)
+            {
+                if (contestants[i].isWinner == false)
+                {
+                    Console.WriteLine("Thank you for entering our sweepstakes! You didn't win.");
+                }
+                else if (contestants[i].isWinner == true)
+                {
+                    Console.WriteLine("You win! You will shortly receive an email with details.");
+                }
+            }
         }
 
     }
