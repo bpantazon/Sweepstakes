@@ -13,11 +13,11 @@ namespace Sweepstakes
             //how to get the stack or queue to sweepstakes and each manager??? 
             if (managerChoice == "q")
             {
-                //new queue for the queue manager?
+                SweepstakesQueueManager queueManager = new SweepstakesQueueManager();
             }
             else if (managerChoice == "s")
             {
-                //new stack for stack manager
+                SweepstakesStackManager stackManager = new SweepstakesStackManager();
             }
         }
 

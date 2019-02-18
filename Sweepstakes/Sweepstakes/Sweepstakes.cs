@@ -14,7 +14,7 @@ namespace Sweepstakes
 
         Sweepstakes(string name)
         {
-            this.name = name;
+            this.name = UserInterface.NameSweepstakes();
             contestants = new Dictionary<int, Contestant>();
         }
 
@@ -40,6 +40,13 @@ namespace Sweepstakes
             Console.WriteLine($"Last name: {contestant.lastName}");
             Console.WriteLine($"Email: {contestant.email}");
             Console.ReadLine();
+        }
+        public void DecideToPickWinner(int response)
+        {
+            if (response == 1)
+            {
+                PickWinner();
+            }           
         }
 
     }

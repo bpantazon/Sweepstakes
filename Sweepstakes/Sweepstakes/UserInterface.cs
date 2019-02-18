@@ -8,13 +8,7 @@ namespace Sweepstakes
 {
     public static class UserInterface
     {
-        //similar to lemonade stand?
-
-        //public static void DisplayContestantInfo(Contestant contestant)
-        //{
-        //    Console.WriteLine($"Contestant: {contestant}");
-        //    Console.WriteLine();
-        //}
+       
         public static string GetContestantInfo(string info)
         {
             //int registration;
@@ -43,7 +37,7 @@ namespace Sweepstakes
         {
             string managerChoice;
             Console.WriteLine("Do you want your sweepstakes managed via stack or queue? Type 's' for stack or 'q' for queue");
-            managerChoice = Console.ReadLine();
+            managerChoice = Console.ReadLine().ToLower().Trim();
             if (managerChoice != "s" || managerChoice != "q") 
             {
                 Console.WriteLine("Please enter 's' or 'q'!");
@@ -51,6 +45,29 @@ namespace Sweepstakes
                 ChooseManager();
             }
             return managerChoice;
+        }
+        public static string NameSweepstakes()
+        {
+            string sweepstakesName;
+            Console.WriteLine("What is the name of this sweeepstakes?");
+            sweepstakesName = Console.ReadLine();
+            return sweepstakesName;
+        }
+
+        public static int AskToRunSweepstakes()
+        {           
+            int response = 0;
+            Console.WriteLine("Are you ready to run sweepstakes? Type '1' to run sweepstakes or '2' to continue adding contestants");
+            try
+            {
+                response = Convert.ToInt32(Console.ReadLine());                
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("You did not enter a number of '1' or '2'!");
+                AskToRunSweepstakes();
+            }
+            return response;
         }
     }
 }

@@ -12,6 +12,7 @@ namespace Sweepstakes
         Queue queue = new Queue();
         public Sweepstakes GetSweepstakes()
         {
+            //grab an instantiated Sweepstakes object
             throw new NotImplementedException();
         }
 
