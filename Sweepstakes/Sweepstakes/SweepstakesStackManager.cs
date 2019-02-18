@@ -9,7 +9,7 @@ namespace Sweepstakes
 {
     class SweepstakesStackManager : ISweepstakesManager
     {
-        Stack sweepstakesStack = new Stack();
+        Stack<Sweepstakes> sweepstakesStack = new Stack<Sweepstakes>();
         public Sweepstakes GetSweepstakes()
         {
             throw new NotImplementedException();

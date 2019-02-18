@@ -6,8 +6,21 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    class MarketingFirm
+    public class MarketingFirm
     {
-        //like the 'Game' class?
+
+        ISweepstakesManager manager;
+        public MarketingFirm(ISweepstakesManager manager)
+        {
+            this.manager = manager;
+        }
+        public void runSweepstakes()
+        {
+            UserInterface.ChooseManager();
+            UserInterface.NameSweepstakes();
+            UserInterface.NameSweepstakes();
+        }
+        
+
     }
 }

@@ -9,16 +9,22 @@ namespace Sweepstakes
 {
     class SweepstakesQueueManager : ISweepstakesManager
     {
-        Queue queue = new Queue();
+        Queue<Sweepstakes> queue = new Queue<Sweepstakes>();
         public Sweepstakes GetSweepstakes()
         {
-            //grab an instantiated Sweepstakes object
-            throw new NotImplementedException();
+            //for each to find the Sweepstakes you're looking for
+            //grab an instantiated Sweepstakes object, dequeue from queue
+            Sweepstakes chosenSweepstakes;
+            chosenSweepstakes = queue.Dequeue();
+
+            return chosenSweepstakes;
+            
         }
 
         public void InsertSweepstakes(Sweepstakes sweepstakes)
         {
-            
+            //enqueue to queue
+            queue.Enqueue(sweepstakes);
         }
     }
 }
