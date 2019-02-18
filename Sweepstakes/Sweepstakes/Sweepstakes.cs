@@ -30,7 +30,8 @@ namespace Sweepstakes
             int pickedRegistrationNumber;
             pickedRegistrationNumber = rand.Next(0, contestants.Count);
             winner = contestants[pickedRegistrationNumber];
-            string winnerName = contestants[pickedRegistrationNumber].firstName + contestants[pickedRegistrationNumber].lastName;
+            winner.isWinner = true;
+            string winnerName = contestants[pickedRegistrationNumber].firstName + contestants[pickedRegistrationNumber].lastName + contestants[pickedRegistrationNumber].email;
             return winnerName;
         }
 

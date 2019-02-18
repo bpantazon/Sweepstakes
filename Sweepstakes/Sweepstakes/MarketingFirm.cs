@@ -8,17 +8,25 @@ namespace Sweepstakes
 {
     public class MarketingFirm
     {
-
+        List<ISweepstakesManager> managerList;
         ISweepstakesManager manager;
+        ManagerFactory factory = new ManagerFactory();
         public MarketingFirm(ISweepstakesManager manager)
         {
+            managerList = new List<ISweepstakesManager>();
             this.manager = manager;
         }
         public void runSweepstakes()
         {
-            UserInterface.ChooseManager();
+            string managerChoice;
+            managerChoice = UserInterface.ChooseManager();
             UserInterface.NameSweepstakes();
-            UserInterface.NameSweepstakes();
+            
+            factory.AssignSweepstakesType(managerChoice);
+
+
+
+
         }
         
 

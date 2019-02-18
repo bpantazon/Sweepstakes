@@ -22,7 +22,7 @@ namespace Sweepstakes
 
         public void InsertSweepstakes(Sweepstakes sweepstakes)
         {
-            //enqueue to queue
+            
             queue.Enqueue(sweepstakes);
         }
     }

@@ -53,8 +53,6 @@ namespace Sweepstakes
                     //    return registration;
 
             }
-
-
         }
         public static int AskToRunSweepstakes()
         {
@@ -70,6 +68,23 @@ namespace Sweepstakes
                 AskToRunSweepstakes();
             }
             return response;
+        }
+        public static int GetNumberInput(string prompt)
+        {
+            Console.WriteLine(prompt);
+            string response = Console.ReadLine();
+            return Convert.ToInt32(response);
+        }
+        public static string GetStringInput(string prompt)
+        {
+            Console.WriteLine(prompt);
+            string response = Console.ReadLine();
+            return response;
+        }
+        public static void DisplayMessage(string message)
+        {
+            Console.WriteLine(message);
+            Console.ReadLine();
         }
     }
 }
