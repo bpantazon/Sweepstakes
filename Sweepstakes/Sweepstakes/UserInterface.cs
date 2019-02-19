@@ -69,6 +69,8 @@ namespace Sweepstakes
             }
             return response;
         }
+
+        //should use these instead of the ones above
         public static int GetNumberInput(string prompt)
         {
             Console.WriteLine(prompt);

@@ -8,15 +8,20 @@ namespace Sweepstakes
 {
     public class MarketingFirm
     {
-        List<ISweepstakesManager> managerList;
+        //List<ISweepstakesManager> managerList;
         ISweepstakesManager manager;
-        ManagerFactory factory = new ManagerFactory();
+        //ManagerFactory factory = new ManagerFactory();
         public MarketingFirm(ISweepstakesManager manager)
         {
-            managerList = new List<ISweepstakesManager>();
+            //managerList = new List<ISweepstakesManager>();
             this.manager = manager;
         }
-       
+    
+        //public void ManageSweepstakes()
+        //{
+        //   var thing = manager.GetSweepstakes();
+        //   thing.PickWinner();
+        //}
         
 
     }

@@ -10,7 +10,7 @@ namespace Sweepstakes
     {
         public string firstName;
         public string lastName;
-        public string email;        
+        public string email;
         public int registrationNumber;
         public bool isWinner = false;
 
@@ -22,9 +22,9 @@ namespace Sweepstakes
             this.registrationNumber = registrationNumber;
             this.isWinner = isWinner;
         }
-        public void Notify()
-        {
-            //send email
-        }
+        //public void Notify()
+        //{
+        //    //send email
+        //}
     }
 }

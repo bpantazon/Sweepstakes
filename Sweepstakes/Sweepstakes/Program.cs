@@ -10,7 +10,13 @@ namespace Sweepstakes
     {
         static void Main(string[] args)
         {
-            UserInterface.ChooseManager();
+            string manager = UserInterface.ChooseManager(); //variable to store input of manager type
+            ManagerFactory factory = new ManagerFactory(); //creates manager factory
+            ISweepstakesManager madeManager = factory.AssignSweepstakesType(manager);  //variable of ISweepstakesManager to hold the created manager type         
+            MarketingFirm marketingFirm = new MarketingFirm(madeManager); // creates MarketingFirm with the selected manager type of stack or queue 
+
+
+            
             
         }
     }

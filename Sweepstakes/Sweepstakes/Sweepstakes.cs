@@ -49,12 +49,12 @@ namespace Sweepstakes
                 PickWinner();
             }           
         }
-        public void NotifyContestants()
+        public void NotifyContestants() //wrote to console in place of sending an email. Looking to change if MailKit API is implemented
         {
             for (int i = 0; i <= contestants.Count; i++)
             {
                 if (contestants[i].isWinner == false)
-                {
+                {                   
                     Console.WriteLine("Thank you for entering our sweepstakes! You didn't win.");
                 }
                 else if (contestants[i].isWinner == true)
